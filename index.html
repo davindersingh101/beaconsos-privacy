@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BeaconSOS — Privacy Policy</title>
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --panel: #141414;
+    --border: #262626;
+    --text: #e8e8e8;
+    --dim: #999999;
+    --accent: #e0342c;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  h1 {
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .effective-date {
+    color: var(--dim);
+    font-size: 14px;
+    margin: 4px 0 40px 52px;
+  }
+  h2 {
+    font-size: 17px;
+    color: var(--accent);
+    margin: 40px 0 12px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  p { margin: 0 0 14px; color: var(--text); }
+  strong { color: #ffffff; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 20px;
+    font-size: 14.5px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    background: var(--panel);
+    color: var(--dim);
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+
+  .note-box {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    font-size: 14.5px;
+    color: var(--dim);
+  }
+  .note-box strong { color: var(--text); }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--dim);
+    font-size: 13px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">🆘</div>
+    <h1>BeaconSOS Privacy Policy</h1>
+  </header>
+  <p class="effective-date">Effective date: July 5, 2026</p>
+
+  <p>BeaconSOS ("the app") is developed by Davinder Singh ("we", "us"). This policy explains what data the app handles and why. BeaconSOS is designed with a simple principle: <strong>your data stays on your device.</strong> There is no account, no backend server, and no cloud sync.</p>
+
+  <h2>1. Data We Collect</h2>
+  <p>BeaconSOS does not collect, transmit, or sell any personal data to us or any third party. All data you enter — your name, emergency contacts, medical information, and message text — is:</p>
+  <ul>
+    <li>Stored <strong>only on your device</strong>, inside Android's <code>EncryptedSharedPreferences</code> (AES-256 encryption, backed by the Android Keystore).</li>
+    <li>Never uploaded to any server we operate, because we don't operate one.</li>
+    <li>Never shared with advertisers, analytics providers, or any other third party. BeaconSOS contains no advertising SDKs and no analytics SDKs.</li>
+  </ul>
+
+  <h2>2. What Happens When You Activate SOS</h2>
+  <p>When you hold the SOS button for 5 seconds, the app:</p>
+  <ul>
+    <li>Reads your device's current location (if location permission is granted).</li>
+    <li>Sends a single SMS text message — containing your name, a short message, and a Google Maps link to your location — directly to the emergency contacts you configured.</li>
+    <li>Places a phone call to your primary emergency contact.</li>
+  </ul>
+  <p>This SMS and call are sent <strong>directly from your phone's own SIM/carrier connection</strong>, the same way any text or call you send normally works. BeaconSOS does not route this data through any server of ours — we never see the content of the message, who it was sent to, or your location.</p>
+  <p>No SMS or call is ever sent outside of this explicit, user-initiated SOS action. The app does not send background messages, location pings, or check-ins of any kind.</p>
+
+  <h2>3. Permissions We Use and Why</h2>
+  <p>BeaconSOS requires all of the permissions below to function. Each one protects a specific part of what the SOS button does, so <strong>the app cannot be used without granting all of them</strong> — there is no reduced or degraded mode.</p>
+  <table>
+    <tr><th>Permission</th><th>Why we need it</th></tr>
+    <tr><td>Send SMS</td><td>To send the emergency location message directly when you activate SOS, without needing to open a messaging app first.</td></tr>
+    <tr><td>Call Phone</td><td>To call your primary emergency contact directly when you activate SOS.</td></tr>
+    <tr><td>Location (fine/coarse)</td><td>To include your current location in the emergency SMS so your contacts know where you are.</td></tr>
+    <tr><td>Notifications</td><td>To show the persistent "Emergency Access" notification that lets you open BeaconSOS from the lock screen.</td></tr>
+    <tr><td>Display over other apps ("Call Privacy")</td><td>To show a privacy overlay during the emergency call, hiding the raw phone number so anyone assisting you — who may not be you, since BeaconSOS is designed to be reachable from a locked phone — sees only the contact's name, never their number.</td></tr>
+    <tr><td>Receive boot completed</td><td>To restart the lock-screen access notification after your phone reboots.</td></tr>
+    <tr><td>Foreground service</td><td>To keep lock-screen access available at all times without the app being killed by the system.</td></tr>
+  </table>
+
+  <div class="note-box">
+    <strong>A note on "Display over other apps":</strong> unlike the other permissions above, this one has no standard system prompt — you grant it from a dedicated settings screen, which BeaconSOS links you to directly. Some enterprise-managed or IT-restricted devices do not allow this permission to be granted at all. On such devices, BeaconSOS currently cannot be set up or used. We are working on a separate variant for enterprise-managed environments.
+  </div>
+
+  <h2>4. Emergency Medical Information</h2>
+  <p>BeaconSOS lets you optionally add a short emergency medical summary, shown on your home screen for a bystander or first responder to see at a glance. This consists of:</p>
+  <ul>
+    <li>A short free-text summary (up to 40 characters)</li>
+    <li><strong>Allergies</strong> (up to 25 characters)</li>
+    <li><strong>Illness / Condition</strong> (up to 25 characters)</li>
+    <li><strong>Meds / Risk</strong> (up to 25 characters)</li>
+    <li><strong>Devices</strong> — e.g. pacemaker, insulin pump (up to 25 characters)</li>
+  </ul>
+  <p>This information is stored encrypted, locally on your device, and is only ever displayed on your own device's home screen. It is never transmitted anywhere, including in the emergency SMS itself, and never sent to us or any third party.</p>
+
+  <h2>5. Third-Party Services</h2>
+  <p>BeaconSOS uses Google Play Services' Location APIs (<code>FusedLocationProviderClient</code>) to obtain your device's location efficiently. This is a standard Android system component; location data obtained through it is used only as described in Section 2 and is not transmitted to Google or anyone else by BeaconSOS.</p>
+
+  <h2>6. Data Retention and Deletion</h2>
+  <p>All data is stored locally on your device. Uninstalling the app removes all locally stored data. There is no account to delete because no account exists.</p>
+
+  <h2>7. Children's Privacy</h2>
+  <p>BeaconSOS is not directed at children and does not knowingly collect data from children, since it does not collect data from anyone in the first place.</p>
+
+  <h2>8. Changes to This Policy</h2>
+  <p>If this policy changes, the updated version will be posted at the same URL with a revised effective date.</p>
+
+  <h2>9. Contact Us</h2>
+  <p>For questions about this privacy policy, contact: <a href="mailto:support@dipaporos.com">support@dipaporos.com</a></p>
+
+  <footer>
+    BeaconSOS Privacy Policy — Effective July 5, 2026
+  </footer>
+
+</div>
+</body>
+</html>
